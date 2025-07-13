@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "lista-de-compras",
+    "name": "Lista de Compras",
     "slug": "lista-de-compras",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -20,10 +20,19 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.feijaoozin.listadecompras"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "aac027be-4945-4a01-9073-6bb1b35f7ec7"
+      }
     }
   }
 }
