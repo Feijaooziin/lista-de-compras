@@ -3,6 +3,7 @@ import {
   Alert,
   Button,
   FlatList,
+  StatusBar,
   StyleSheet,
   Text,
   TextInput,
@@ -80,7 +81,19 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <StatusBar barStyle={"light-content"} />
+
       <View style={styles.form}>
+        <Text
+          style={{
+            color: "#fff",
+            fontSize: 24,
+            fontWeight: "bold",
+            marginBottom: 20,
+          }}
+        >
+          Lista de Compras
+        </Text>
         <TextInput
           placeholder="O que você precisa comprar?"
           onChangeText={setDescription}
@@ -88,7 +101,7 @@ export default function App() {
           style={styles.input}
         />
 
-        <Button title="Adicionar" onPress={add} />
+        <Button title="Adicionar" color={"red"} onPress={add} />
       </View>
 
       <FlatList
@@ -111,15 +124,17 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     alignItems: "center",
+    backgroundColor: "#000",
   },
 
   form: {
     width: "100%",
     alignItems: "center",
-    marginTop: 100,
+    marginTop: 80,
     gap: 16,
-    marginBottom: 50,
+    marginBottom: 80,
   },
 
   input: {
@@ -127,8 +142,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: "90%",
     fontWeight: "bold",
+    marginBottom: 20,
   },
   empty: {
-    color: "#888888",
+    color: "#d3d3d3",
+    fontSize: 16,
   },
 });

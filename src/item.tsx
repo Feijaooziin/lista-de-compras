@@ -20,7 +20,7 @@ export default function Item({ data, onStatus, onRemove }: Props) {
           <MaterialIcons
             name={data.done ? "check-box" : "check-box-outline-blank"}
             size={24}
-            color="#828282"
+            color="#d3d3d3"
           />
         </TouchableOpacity>
 
@@ -28,7 +28,7 @@ export default function Item({ data, onStatus, onRemove }: Props) {
       </View>
 
       <TouchableOpacity activeOpacity={0.8} onPress={onRemove}>
-        <MaterialIcons name="delete" size={24} color="#828282" />
+        <MaterialIcons name="delete" size={24} color="#d3d3d3" />
       </TouchableOpacity>
     </View>
   );
@@ -48,6 +48,6 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#555555",
+    color: "#d3d3d3",
   },
 });
