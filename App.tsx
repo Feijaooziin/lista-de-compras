@@ -58,11 +58,21 @@ export default function App() {
     store.setRow(TABLE_NAME, id, { description, done: false });
 
     setDescription("");
-    // get();
   }
 
   function remove(id: string) {
-    store.delRow(TABLE_NAME, id);
+    Alert.alert("Remover", "Deseja mesmo remover este item?", [
+      {
+        text: "Não",
+        style: "cancel",
+      },
+      {
+        text: "Sim",
+        onPress: () => {
+          store.delRow(TABLE_NAME, id);
+        },
+      },
+    ]);
   }
 
   function toggleStatus(id: string) {
@@ -96,12 +106,13 @@ export default function App() {
         </Text>
         <TextInput
           placeholder="O que você precisa comprar?"
+          placeholderTextColor="#000"
           onChangeText={setDescription}
           value={description}
           style={styles.input}
         />
 
-        <Button title="Adicionar" color={"red"} onPress={add} />
+        <Button title="Adicionar" color={"#830000"} onPress={add} />
       </View>
 
       <FlatList
@@ -144,6 +155,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 20,
   },
+
   empty: {
     color: "#d3d3d3",
     fontSize: 16,
