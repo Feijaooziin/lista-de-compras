@@ -13,6 +13,7 @@
     "expo": "~53.0.17",
     "expo-sqlite": "~15.2.14",
     "expo-status-bar": "~2.2.3",
+    "feather-icons": "^4.29.2",
     "react": "19.0.0",
     "react-native": "0.79.5",
     "tinybase": "^6.4.0"

@@ -9,6 +9,7 @@ import {
   TextInput,
   View,
 } from "react-native";
+import { Feather, Ionicons } from "@expo/vector-icons";
 import Item from "./src/item";
 
 import { createStore } from "tinybase";
@@ -94,16 +95,21 @@ export default function App() {
       <StatusBar barStyle={"light-content"} />
 
       <View style={styles.form}>
-        <Text
-          style={{
-            color: "#fff",
-            fontSize: 24,
-            fontWeight: "bold",
-            marginBottom: 20,
-          }}
-        >
-          Lista de Compras
-        </Text>
+        <View style={{ flexDirection: "row", gap: 20 }}>
+          <Feather name="heart" size={32} color={"white"} />
+          <Text
+            style={{
+              color: "#fff",
+              fontSize: 24,
+              fontWeight: "bold",
+              marginBottom: 20,
+            }}
+          >
+            LISTA DO APÊ 22
+          </Text>
+          <Feather name="heart" size={32} color={"white"} />
+        </View>
+
         <TextInput
           placeholder="O que você precisa comprar?"
           placeholderTextColor="#000"
